@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allison&family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Great+Vibes&family=Inter:wght@100..900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: inter, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
+  color: rgb(195, 190, 202);
+  font-weight: 200;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), rgb(0, 0, 0)), url(./images/bg-mobile.jpg) no-repeat;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem 13rem;
+  gap: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4rem;
+  font-family: "great vibes", serif;
+  color: rgb(194, 170, 224);
+  color: mediumslateblue;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+.header__subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.header__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.link {
+  text-decoration: none;
+  background: mediumslateblue;
+  color: rgb(195, 190, 202);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.link--violet {
+  background: rgb(195, 190, 202);
+  color: mediumslateblue;
+}
+
+.link:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  background: rgb(195, 190, 202);
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.link--violet:before {
+  background: mediumslateblue;
+}
+
+.link:hover::before {
+  width: 100%;
+}
+
+.link:hover {
+  color: mediumslateblue;
+}
+
+.link--violet:hover {
+  color: rgb(195, 190, 202);
+}
+
+.about {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), linear-gradient(black, rgb(15, 1, 27), rgb(7, 1, 46), rgb(15, 10, 49), rgb(33, 27, 75));
+  padding: 2rem;
+}
+
+.about__group {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.about__container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  flex-direction: column;
+  gap: 3rem;
+  margin: auto;
+}
+
+.about__paragraph {
+  max-width: 25rem;
+  margin-inline: auto;
+  text-shadow: 0 0 10px;
+}
+
+.about__link {
+  justify-self: center;
+}
+
+.scroll-icon {
+  opacity: 0.1;
+  animation: float 5s infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-0.5rem);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+}
+.info {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), linear-gradient(to top, black, rgb(15, 1, 27), rgb(7, 1, 46), rgb(15, 10, 49), rgb(33, 27, 75));
+  padding: 2rem 2rem 13rem;
+}
+
+.info__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-block: 6rem;
+}
+
+.info__card {
+  width: 300px;
+  aspect-ratio: 3/4;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 10px 15px 15px rgb(7, 0, 12);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 5rem;
+  color: mediumslateblue;
+  font-family: "good vibes", serif;
+}
+
+.info__description {
+  position: absolute;
+  bottom: -30%;
+  transition: 0.7s;
+  opacity: 0;
+  padding: 2rem;
+  font-size: 0.8rem;
+  font-family: "inter", sans-serif;
+  color: rgb(195, 190, 202);
+}
+
+.info__card:hover .info__description {
+  bottom: 0%;
+  opacity: 1;
+}
+
+.info__card:nth-child(1) {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url("./images/silhouette.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info__card:nth-child(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url("./images/ink.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info__card:nth-child(3) {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url("./images/splat.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info__heading, .about__heading {
+  letter-spacing: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(195, 190, 202);
+}
+
+.info__message {
+  text-align: center;
+}
+
+footer {
+  margin: 0;
+  padding: 2rem;
+  background: mediumslateblue;
+}
+footer p {
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */
