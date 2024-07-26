@@ -5,10 +5,14 @@
     box-sizing: border-box;
 }
 
+    html {
+        scroll-snap-type: y mandatory;          
+    }
+
 body {
     margin: 0;
     font-family: inter, sans-serif;
-    font-size: .9rem;
+    font-size: .8rem; 
     letter-spacing: .05rem;
     line-height: 1.4; 
     color: rgb(195, 190, 202);
@@ -25,6 +29,8 @@ header {
     align-items: center; 
     padding:2rem 2rem 13rem;  
     gap: 2rem; 
+    scroll-snap-align: start;    
+
 }
 
 h1 {
@@ -107,13 +113,15 @@ h3 {
 
 .about {  
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), linear-gradient(black, rgb(15, 1, 27), rgb(7, 1, 46), rgb(15, 10, 49), rgb(33, 27, 75));  
-    padding:2rem;          
+    padding:2rem;         
+    scroll-snap-align: start;    
+
 } 
 
 .about__group { 
     scroll-snap-type: y mandatory;
-    height: 100vh;
-    overflow-y: hidden; 
+    // height: 100vh;  
+    // overflow-y: hidden;  
 } 
 
 .about__container {
@@ -121,7 +129,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: start; 
+    scroll-snap-align: start;    
     flex-direction: column; 
     gap: 3rem;  
     margin: auto;
@@ -129,8 +137,9 @@ h3 {
 
 .about__paragraph {
     max-width: 25rem;  
-    margin-inline: auto;
+    margin-inline: auto; 
     text-shadow: 0 0 10px;  
+    // scroll-snap-align: start;  
 }  
  
 .about__link {
@@ -138,7 +147,7 @@ h3 {
 }
 
 .scroll-icon { 
-    opacity: .1;
+    opacity: .3; 
     animation: float 5s infinite;
 }
 
@@ -146,7 +155,7 @@ h3 {
     0%, 100% {
         transform: translateY(0);
     }
-    25% {
+    25% { 
         transform: translateY(-.5rem);
     }
     50% {
@@ -157,6 +166,7 @@ h3 {
 .info {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), linear-gradient(to top, black, rgb(15, 1, 27), rgb(7, 1, 46), rgb(15, 10, 49), rgb(33, 27, 75));  
     padding:2rem 2rem 13rem;
+    scroll-snap-align: start;    
 }
 
 .info__container { 
@@ -169,7 +179,7 @@ h3 {
 }
 
 .info__card {
-    width: 300px; 
+    width: 20rem;  
     aspect-ratio: 3/4; 
     position: relative; 
     overflow: hidden;
@@ -177,11 +187,22 @@ h3 {
     cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start;   
     font-size: 5rem;  
     color: mediumslateblue;
     font-family: 'good vibes', serif;
+    transition: .7s; 
 } 
+
+.info__number {
+    margin-top: 40%;
+    transition: .7s;
+}
+
+.info__card:hover .info__number {
+    margin-top: 5% ;    
+    font-size: 3rem; 
+}
 
 .info__description {
   position: absolute; 
