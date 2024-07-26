@@ -6,7 +6,7 @@
 }
 
     html {
-        scroll-snap-type: y mandatory;          
+        scroll-snap-type: y mandatory;         
     }
 
 body {
@@ -16,9 +16,9 @@ body {
     letter-spacing: .05rem;
     line-height: 1.4; 
     color: rgb(195, 190, 202);
-    font-weight: 200;  
+    font-weight: 200; 
 } 
- 
+
 header { 
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./images/bg-mobile.jpg) no-repeat;
     min-height: 100vh; 
@@ -115,8 +115,7 @@ h3 {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), linear-gradient(black, rgb(15, 1, 27), rgb(7, 1, 46), rgb(15, 10, 49), rgb(33, 27, 75));  
     padding:2rem;         
     scroll-snap-align: start;    
-
-} 
+}   
 
 .about__group { 
     scroll-snap-type: y mandatory;
@@ -134,7 +133,7 @@ h3 {
     gap: 3rem;  
     margin: auto;
 }
-
+ 
 .about__paragraph {
     max-width: 25rem;  
     margin-inline: auto; 
@@ -261,3 +260,9 @@ footer {
         margin: 0;     
     }
 }
+
+.canvas { 
+    width: 80%; 
+    height: 100%;
+    position: absolute;
+}  

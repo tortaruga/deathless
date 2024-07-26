@@ -244,4 +244,10 @@ footer {
 }
 footer p {
   margin: 0;
+}
+
+.canvas {
+  width: 80%;
+  height: 100%;
+  position: absolute;
 }/*# sourceMappingURL=styles.css.map */
